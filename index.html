@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Some website - Home</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Header at top of page -->
+  <header id="main-header">
+    <h1 class="heading">
+      Some website I made
+    </h1>
+
+    <nav>
+      <!-- zwsp to ensure box height -->
+      &#8203;
+      <a class="nav-option nav-link" href="#">Home</a>
+    </nav>
+  </header>
+
+  <!-- Sticky header that appears when scrolled down -->
+  <header id="scroll-header">
+    <h1 class="heading">
+      Some website I made
+    </h1>
+  </header>
+
+  <!-- Title -->
+  <div id="title-container">
+    <img id="title-background" src="resources/switchboard.jpeg" />
+    <div id="title-wrapper">
+      <h1 class="heading" id="title">Welcome!</h1>
+      <p id="subtitle">This site is 100% by me, no templates or anything either ;)</p>
+    </div>
+  </div>
+
+  <!-- Sidebar on the right (contents menu) -->
+  <aside id="sidebar">
+    <h3 class="heading">Contents</h3>
+    <ul id="toc-list">
+      <!-- toc.js will automatically add elements here-->
+    </ul>
+  </aside>
+  
+  <!-- Main article -->
+  <article id="main-article">
+    <h2 class="heading article-heading">Introduction</h2>
+    <section>
+      <p>This website will teach the basics of communication technologies as seen in the IGCSE curriculum. It was created as an assignment in the course to assess both my communication technologies knowledge and my web development skills. Some of these bits include the different types of data transmission, how the web works, the history of the web, and <s>me flexing my web development and jQuery skills</s> more. Enjoy!</p>
+      <p style="color:red;"><s>Note: Some features (such as the Table of Contents and sticky header) may not 'load' as I am using jQuery to automate them for me. I import jQuery from Google APIs which means if you are in China without a VPN, it will fail to load and the code will be unable to execute the tasks</s> <br> Note 2: I have adjusted the page so that it uses a downloaded version of jQuery, which means while things may load a bit slower, it means you can see everything as normal :)</p>
+    </section>
+    
+    <h2 class="heading article-heading">Glossary</h2>
+    <section>
+      <p>Some pages on this website use <em>slightly</em> more complex words than you would use in real life. Sometimes they can get quite confusing, so I've made a comprehensive list of some of the more confusing words from the website!</p>
+      <p><a href="glossary.html">Go to Glossary</a></p>
+    </section>
+  </article>
+
+  <!-- Footer (not much to see here :shrug:) -->
+  <footer id="footer">
+    <p>© Daniel Gu</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/stickyheader.js"></script>
+  <script src="scripts/toc.js"></script>
+</body>
+
+</html>

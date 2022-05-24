@@ -1,0 +1,238 @@
+/*
+*  General
+*/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+
+/*
+*  Headers
+*/
+header {
+  z-index: 32767;
+
+  width: 100%;
+  height: 90px;
+  margin: 0;
+
+  background: #dddd80;
+}
+
+#main-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#scroll-header {
+  position: absolute;
+
+  height: 60px;
+  margin-top: -100%;
+}
+
+
+/*
+*  Headings
+*/
+header h1 {
+  margin: 10px;
+}
+
+header .heading {
+  text-align: center;
+}
+
+.heading {
+  font-family:Roboto, Helvetica, sans-serif;
+  font-weight: 120;
+}
+
+
+/* 
+*  Nav
+*/
+nav {
+  padding: 2px;
+  margin: 10px;
+
+  z-index: 127;
+
+  background: lightgray;
+}
+
+.nav-option {
+  height: 1.2em;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Used for toc as well */
+.nav-link {
+  font-style: normal;
+  text-decoration: none;
+
+  color: black;
+}
+
+.nav-link:hover, .nav-link:active {
+  text-decoration: underline;
+
+  color: black;
+}
+
+/*
+*  Title
+*/
+#title-container {
+  padding: 0;
+  margin: 0;
+  max-height: 250px;
+}
+
+#title-background {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+}
+
+#title-wrapper {
+  height: 250px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0;
+  
+  z-index: 1;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#title {
+  margin: inherit;
+  padding-top: 140px;
+
+  font-size: 4em;
+}
+
+#subtitle {
+  margin: inherit;
+
+  color: #ddd;
+}
+
+
+/*
+*  Sidebar (+ toc)
+*/
+#sidebar {
+  width: 20%;
+  padding: 1rem;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  background-color: lightgray;
+
+  float: right;
+}
+
+#toc-list {
+  padding-left: 24px !important;
+  margin: 0px;
+}
+
+#sidebar .heading {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+
+/*
+*  Article
+*/
+#main-article {
+  /*width: 80% !important;*/
+  padding: 0 40px 20px 40px;
+  min-height: 350px;
+}
+
+.article-heading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.heading-pointer {
+  /* Invisible div that the toc will point to
+  * (to compensate for header height) */
+  width: 0;
+  height: 80px;
+  margin-top: -80px;
+
+  position: absolute;
+}
+
+
+/*
+*  Footer
+*/
+#footer {
+  height: 2em;
+
+  background-color: #dddd80;
+
+  text-align: right;
+  vertical-align: bottom;
+
+  position: sticky 100%;
+}
+
+#footer p {
+  margin: 0;
+  padding: 5px;
+  
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 550;
+}
+
+
+/*
+*  Other
+*/
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #888;
+  padding: 10px;
+}
+
+@keyframes flash {
+  0% {
+    background-color: transparent;
+  }
+  3% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
