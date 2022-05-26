@@ -5,6 +5,7 @@
 html, body {
   height: 100%;
   width: 100%;
+
   padding: 0;
   margin: 0;
 
@@ -24,11 +25,12 @@ p {
 *  Headers
 */
 header {
-  z-index: 32767;
 
   width: 100%;
   height: 90px;
   margin: 0;
+
+  z-index: 32767;
 
   background: #dddd80;
 }
@@ -77,6 +79,7 @@ nav {
 
 .nav-option {
   height: 1.2em;
+
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -99,21 +102,25 @@ nav {
 *  Title
 */
 #title-container {
+  height: 250px;
+
   padding: 0;
   margin: 0;
-  max-height: 250px;
 }
 
 #title-background {
   width: 100%;
-  height: 250px;
+  height: inherit;
+
   position: absolute;
   z-index: -1;
+
   object-fit: cover;
 }
 
 #title-wrapper {
-  height: 250px;
+  height: inherit;
+
   padding-left: 40px;
   padding-right: 40px;
   margin: 0;
@@ -125,13 +132,18 @@ nav {
 }
 
 #title {
+  position:relative;
+  top: 140px;
+
   margin: inherit;
-  padding-top: 140px;
 
   font-size: 4em;
 }
 
 #subtitle {
+  position:relative;
+  top: 140px;
+  
   margin: inherit;
 
   color: #ddd;
@@ -143,6 +155,7 @@ nav {
 */
 #sidebar {
   width: 20%;
+
   padding: 1rem;
   margin-top: 20px;
   margin-left: 20px;
@@ -184,6 +197,7 @@ nav {
   * (to compensate for header height) */
   width: 0;
   height: 80px;
+
   margin-top: -80px;
 
   position: absolute;
@@ -221,8 +235,9 @@ table {
 }
 
 td, th {
-  border: 1px solid #888;
   padding: 10px;
+
+  border: 1px solid #888;
 }
 
 @keyframes flash {
