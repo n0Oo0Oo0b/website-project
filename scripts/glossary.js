@@ -22,9 +22,6 @@ const DATA = {
 };
 const terms = Object.keys(DATA);
 let $table;
-let idName = (n) => {
-    return n.toLowerCase().replace(' ', '-');
-};
 
 $(() => {
     $table = $('#glossary-table');
@@ -37,7 +34,7 @@ $(() => {
                 v = v.substring(0, idx) + middle + v.substring(idx+kw.length, v.length);
             }
         }
-        
+
         $(`<tr id="${idName(k)}">`)
             .append($(`<td>${k}</td>`))
             .append($(`<td>${v}</td>`))
