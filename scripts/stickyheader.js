@@ -1,4 +1,4 @@
-const appearStart = 380;
+const appearStart = 430;
 const appearLength = 100;
 let $header;
 

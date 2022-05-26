@@ -102,7 +102,7 @@ nav {
 *  Title
 */
 #title-container {
-  height: 250px;
+  height: 300px;
 
   padding: 0;
   margin: 0;
@@ -133,7 +133,7 @@ nav {
 
 #title {
   position:relative;
-  top: 140px;
+  top: 175px;
 
   margin: inherit;
 
@@ -142,7 +142,7 @@ nav {
 
 #subtitle {
   position:relative;
-  top: 140px;
+  top: 175px;
   
   margin: inherit;
 
