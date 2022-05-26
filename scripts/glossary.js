@@ -4,7 +4,7 @@ const DATA = {
     "NIC": "Small chips embedded into computers that allows it to connect to a computer network. Short for 'Network Interface Card'.",
     "URL": "It is a refrence that points to the location of a certain resource. Short for 'Uniform Resource Locator'.",
     "Web Browser": "An application that allows the user to traverse the web.",
-    "Modem": "A device that connects a home to to the ISP.",
+    "Modem": "A device that connects a home to to the ISP. It converts between ISP signals and local signals",
     "Client": "The user-side of the web. Usually refers to the web browser running in the user's machine.",
     "Server": "Massive hubs that store the websites that make up the web. These websites are then accessed by the client on request",
     "Packet": "Information that is sent around the web to transfer data. They each carry small (fixed) amounts of data.",
@@ -22,27 +22,32 @@ const DATA = {
 };
 const terms = Object.keys(DATA);
 let $table;
+let idName = (n) => {
+    return n.toLowerCase().replace(' ', '-');
+};
 
 $(() => {
     $table = $('#glossary-table');
     for (let [k, v] of Object.entries(DATA)) {
-        for (let i in terms) {
-            i = terms[i];
-
-            let idx;
-            if (i.toUpperCase() === i) {
-                idx = v.indexOf(i);
-            } else {
-                idx = v.indexOf(i.toLowerCase());
-            }
+        for (let i=0; i<terms.length; i++) {
+            kw = terms[i];
+            let idx = v.toLowerCase().indexOf(kw.toLowerCase());
             if (idx !== -1) {
-                v = `${v.substring(0, idx)}<span class="definition" style="text-decoration:underline;">${v.substring(idx, idx+i.length)}</span>${v.substring(idx+i.length, v.length)}`;
+                let middle = `<span class="definition" style="text-decoration:underline;">${v.substring(idx, idx+kw.length)}</span>`
+                v = v.substring(0, idx) + middle + v.substring(idx+kw.length, v.length);
             }
         }
-        // $(`<div class="heading-pointer" id="${headerName}">`)
-        $('<tr>')
+        
+        $(`<tr id="${idName(k)}">`)
             .append($(`<td>${k}</td>`))
             .append($(`<td>${v}</td>`))
             .appendTo($table);
+    }
+
+    for (const $e of $('.definition')) {
+        $e.onclick = () => {
+            $('#' + idName($e.innerText))[0].style.animation = '';
+            $('#' + idName($e.innerText))[0].style.animation = 'flash 0.8s linear';
+        };
     }
 });
