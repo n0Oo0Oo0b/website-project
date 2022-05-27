@@ -43,6 +43,15 @@ $(() => {
 
     for (const $e of $('.definition')) {
         $e.onclick = () => {
+            // Scroll to position
+            let boundingBox = $('#' + idName($e.innerText))[0].getBoundingClientRect();
+            if (boundingBox.top < 80) {
+                window.scrollBy(0, boundingBox.top - 80)
+            } else if (boundingBox.bottom > window.innerHeight) {
+                window.scrollBy(0, boundingBox.bottom - window.innerHeight + 20)
+            }
+
+            // Animate flashing
             $('#' + idName($e.innerText))[0].style.animation = '';
             $('#' + idName($e.innerText))[0].style.animation = 'flash 0.8s linear';
         };
