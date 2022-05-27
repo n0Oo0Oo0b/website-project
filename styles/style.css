@@ -239,6 +239,10 @@ td, th {
   border: 1px solid #888;
 }
 
+.note {
+  color: red;
+}
+
 @keyframes flash {
   0% {
     background-color: transparent;
