@@ -212,18 +212,13 @@ nav {
 
   background-color: #dddd80;
 
-  text-align: right;
-  vertical-align: bottom;
-
-  position: sticky 100%;
-}
-
-#footer p {
-  margin: 0;
-  padding: 5px;
-  
   font-family: 'Courier New', Courier, monospace;
   font-weight: 550;
+}
+
+#footer a {
+  margin: 0;
+  padding: 5px;
 }
 
 
