@@ -186,10 +186,14 @@ nav {
   min-height: 350px;
 }
 
+
+#main-article .heading {
+  padding-left: 1rem;
+}
+
 .article-heading {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  padding-left: 1rem;
 }
 
 .heading-pointer {
