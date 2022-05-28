@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Some website - Home</title>
+  <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="styles/style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -30,61 +31,70 @@
   </header>
 
   <!-- Title -->
-  <div id="title-container">
-    <img id="title-background" src="resources/switchboard.jpeg" />
-    <div id="title-wrapper">
-      <h1 class="heading" id="title">Welcome!</h1>
-      <p id="subtitle">This site is 100% by me, no templates or anything either ;)</p>
+  <div id="title-section">
+    <img id="title-image" src="resources/switchboard.jpeg" />
+    <div id="title-darken"></div>
+
+    <div id="title-container" class="container">
+      <div>
+        <h1 class="heading" id="title">Welcome!</h1>
+        <p id="subtitle">This site is 100% by me, no templates or anything either ;)</p>
+      </div>
     </div>
   </div>
 
-  <!-- Sidebar on the right (contents menu) -->
-  <aside id="sidebar">
-    <h3 class="heading">Contents</h3>
-    <ul id="toc-list">
-      <!-- toc.js will automatically add elements here-->
-    </ul>
-  </aside>
-  
-  <!-- Main article -->
-  <article id="main-article">
-    <h2 class="heading article-heading">Introduction</h2>
-    <section>
-      <p>This website will teach the basics of communication technologies as seen in the IGCSE curriculum. It was created as an assignment in the course to assess both my communication technologies knowledge and my web development skills. Some of these bits include the different types of data transmission, how the Web works, the history of the Web, and <s>me flexing my web development and jQuery skills</s> more. Enjoy!</p>
-      <p class="note"><s>Note: Some features (such as the Table of Contents and sticky header) may not 'load' as I am using jQuery to automate them for me. I import jQuery from Google APIs which means if you are in China without a VPN, it will fail to load and the code will be unable to execute the tasks</s> <br> Note 2: I have adjusted the page so that it uses a downloaded version of jQuery, which means while things may load a bit slower, it means you can see everything as normal :)</p>
-    </section>
-    
-    <h2 class="heading article-heading">Glossary</h2>
-    <section>
-      <p>Some pages on this website use <em>slightly</em> more complex words than you would use in real life. Sometimes they can get quite confusing, so I've made a comprehensive list of some of the more confusing words from the website!</p>
-      <p><a href="glossary.html">Go to Glossary</a></p>
-    </section>
+  <!-- Main -->
+  <div class="container">
+    <div class="row">
+      <!-- Sidebar on the right (contents menu) -->
+      <aside id="sidebar" class="col-sm-12 col-md-3 col-lg-2">
+        <h3 class="heading">Contents</h3>
+        <ul id="toc-list">
+          <!-- toc.js will automatically add elements here-->
+        </ul>
+      </aside>
+      
+      <!-- Main article -->
+      <article id="main-article" class="col-sm-12 col-md-9 col-lg-10">
+        <h2 class="heading article-heading">Introduction</h2>
+        <section>
+          <p>This website will teach the basics of communication technologies as seen in the IGCSE curriculum. It was created as an assignment in the course to assess both my communication technologies knowledge and my web development skills. Some of these bits include the different types of data transmission, how the Web works, the history of the Web, and <s>me flexing my web development and jQuery skills</s> more. Enjoy!</p>
+          <p class="note"><s>Note: Some features (such as the Table of Contents and sticky header) may not 'load' as I am using jQuery to automate them for me. I import jQuery from Google APIs which means if you are in China without a VPN, it will fail to load and the code will be unable to execute the tasks</s> <br> Note 2: I have adjusted the page so that it uses a downloaded version of jQuery, which means while things may load a bit slower, it means you can see everything as normal :)</p>
+        </section>
+        
+        <h2 class="heading article-heading">Glossary</h2>
+        <section>
+          <p>Some pages on this website use <em>slightly</em> more complex words than you would use in real life. Sometimes they can get quite confusing, so I've made a comprehensive list of some of the more confusing words from the website!</p>
+          <p><a href="glossary.html">Go to Glossary</a></p>
+        </section>
 
-    <h2 class="heading article-heading">Articles</h2>
-    <p class="note">Actual pages are still under development</p>
-    <section>
-      <div>
-        <h3 class="heading">Sir Tim Berners-Lee</h3>
-        <p>Tim Berners-Lee is the pioneer that made the modern web possible, ahd he is known as the inventor of the World Wide Web.</p>
-        <a href="articles/a.html">Go to Page</a>
-      </div>
-      <div>
-        <h3 class="heading">Types of data transmission</h3>
-        <p>This article will explain the many different types of data transmission that exist in the real world.</p>
-        <a href="articles/a.html">Go to Page</a>
-      </div>
-      <div>
-        <h3 class="heading">But how do browsers work?</h3>
-        <p>Web browsers let you access the Web, but how do they work under the hood? This article will explain how webpage data from servers are sent to you to see.</p>
-        <a href="articles/a.html">Go to Page</a>
-      </div>
-      <div>
-        <h3 class="heading">How HTTPS works</h3>
-        <p>HTTPS dictates how data should be encrypted and sent across the Web. This article will explain in detail how this encryption works to keep the website you visit secure.</p>
-        <a href="articles/a.html">Go to Page</a>
-      </div>
-    </section>
-  </article>
+        <h2 class="heading article-heading">Articles</h2>
+        <p class="note">Actual pages are still under development</p>
+        <section>
+          <div>
+            <h3 class="heading">Sir Tim Berners-Lee</h3>
+            <p>Tim Berners-Lee is the pioneer that made the modern web possible, ahd he is known as the inventor of the World Wide Web.</p>
+            <a href="articles/a.html">Go to Page</a>
+          </div>
+          <div>
+            <h3 class="heading">Types of data transmission</h3>
+            <p>This article will explain the many different types of data transmission that exist in the real world.</p>
+            <a href="articles/a.html">Go to Page</a>
+          </div>
+          <div>
+            <h3 class="heading">But how do browsers work?</h3>
+            <p>Web browsers let you access the Web, but how do they work under the hood? This article will explain how webpage data from servers are sent to you to see.</p>
+            <a href="articles/a.html">Go to Page</a>
+          </div>
+          <div>
+            <h3 class="heading">How HTTPS works</h3>
+            <p>HTTPS dictates how data should be encrypted and sent across the Web. This article will explain in detail how this encryption works to keep the website you visit secure.</p>
+            <a href="articles/a.html">Go to Page</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
 
   <!-- Footer (not much to see here :shrug:) -->
   <footer id="footer">
