@@ -156,6 +156,7 @@ nav {
 *  Sidebar (+ toc)
 */
 #sidebar {
+  top: 20px;
   padding: 1rem;
   background-color: lightgray;
 }
