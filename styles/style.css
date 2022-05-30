@@ -130,6 +130,9 @@ nav {
 }
 
 #title-container {
+
+  padding: 20px;
+
   height: inherit;
   z-index: 1;
 
@@ -158,6 +161,7 @@ nav {
 #sidebar {
   top: 20px;
   padding: 1rem;
+  margin-bottom: 20px;
   background-color: lightgray;
 }
 
@@ -177,10 +181,6 @@ nav {
 */
 #main-article {
   padding: 0 40px 20px 40px;
-}
-
-#main-article .heading {
-  padding-left: 1rem;
 }
 
 .article-heading {
@@ -228,10 +228,6 @@ table {
 td, th {
   padding: 10px;
   border: 1px solid #888;
-}
-
-.note {
-  color: red;
 }
 
 @keyframes flash {
