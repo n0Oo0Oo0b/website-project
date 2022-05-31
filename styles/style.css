@@ -1,243 +1,129 @@
 /*
 *  General
 */
-
-html, body {
-  height: 100%;
-  width: 100%;
-
-  padding: 0;
-  margin: 0;
-
+:root {
+  --background-color: #f5f5f5;
+  --accent-color: #ee8;
+  --text-color: #333;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #eee;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
-p {
-  font-size: 1.1em;
-}
-
-
-/*
-*  Headers
-*/
-header {
-
-  width: 100%;
-  margin: 0;
-
-  z-index: 32767;
-
-  background: #dddd80;
-}
-
-#main-header {
-  height: 130px;
-
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#scroll-header {
-  position: absolute;
-
-  height: 60px;
-  margin-top: -100%;
-}
-
-
-/*
-*  Headings
-*/
-header h1 {
-  margin: 10px;
-}
-
-header .heading {
-  text-align: center;
-}
-
-.heading {
-  font-family:Roboto, Helvetica, sans-serif;
+h1, h2, h3 {
+  font-family: Helvetica, sans-serif;
   font-weight: 120;
 }
 
+.no-margin {
+  margin: 0;
+}
 
-/* 
-*  Nav
+.no-padding {
+  padding: 0;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+
+/*
+*  Header + Breadcrumbs
 */
-nav {
-  padding: 2px;
-  margin: 10px;
-
-  z-index: 127;
-
-  background: lightgray;
+header {
+  height: 120px;
+  background-color: var(--accent-color);
 }
 
-.nav-option {
-  height: 1.2em;
-
-  margin-left: 5px;
-  margin-right: 5px;
+#breadcrumb {
+  background-color: var(--background-color);
 }
 
-/* Used for toc as well */
-.nav-link {
-  font-style: normal;
-  text-decoration: none;
 
-  color: black;
+/*
+*  Navbar
+*/
+#navigation {
+  background-color: var(--accent-color);
 }
 
-.nav-link:hover, .nav-link:active {
-  text-decoration: underline;
-
-  color: black;
+#navigation a {
+  color: var(--text-color);
 }
+
+/* Menu dropdown for navbar on small screens */
+.navbar-toggle {
+  z-index: 32767;
+}
+
+.navbar-toggle .icon-bar {
+  border: 1px solid var(--text-color);
+}
+
+/* Keeps navbar at top when scrolling */
+#navigation.affix {
+  top: 0;
+  width: 100%;
+  z-index: 32766 !important;
+}
+
+#navigation.affix + * {
+  margin-top: 50px;
+}
+
 
 /*
 *  Title
 */
-#title-section {
+#title-wrapper {
+  width: 100%;
   height: 300px;
-
-  margin: 0;
-  padding: 0;
+  margin-bottom: 50px;
 }
 
-#title-image {
+#title-wrapper img {
   width: 100%;
   height: inherit;
-
   position: absolute;
-  z-index: -1;
-
   object-fit: cover;
 }
 
-#title-darken {
+#title-wrapper .darken {
   width: 100%;
   height: inherit;
-
   position: absolute;
-  z-index: 0;
-
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #000b;
 }
 
-#title-container {
-
-  padding: 20px;
-
+#title-wrapper .container {
   height: inherit;
-  z-index: 1;
-
   color: white;
-
+  z-index: 1;
+  position: relative;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-
-#title {
-  margin: 0;
-  position:relative;
-  font-size: 4em;
-}
-
-#subtitle {
-  margin: 0;
-  position:relative;
-  color: #ddd;
-}
-
 
 /*
-*  Sidebar (+ toc)
+*  Content
 */
-#sidebar {
-  top: 20px;
-  padding: 1rem;
-  margin-bottom: 20px;
-  background-color: lightgray;
+#page-nav .affix {
+  top: 100px;
 }
-
-#toc-list {
-  padding-left: 24px !important;
-  margin: 0px;
-}
-
-#sidebar .heading {
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-
-/*
-*  Article
-*/
-#main-article {
-  padding: 0 40px 20px 40px;
-}
-
-.article-heading {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.heading-pointer {
-  /* Invisible div that the toc will point to
-  * (to compensate for header height) */
-  width: 0;
-  height: 80px;
-
-  margin-top: -80px;
-
-  position: absolute;
-}
-
 
 /*
 *  Footer
 */
-#footer {
-  height: 2em;
-
-  background-color: #dddd80;
-
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 550;
-}
-
-#footer a {
-  margin: 0;
-  padding: 5px;
-}
-
-
-/*
-*  Other
-*/
-table {
-  border-collapse: collapse;
-}
-
-td, th {
-  padding: 10px;
-  border: 1px solid #888;
-}
-
-@keyframes flash {
-  0% {
-    background-color: transparent;
-  }
-  3% {
-    background-color: yellow;
-  }
-  100% {
-    background-color: transparent;
-  }
+footer {
+  height: 40px;
+  padding: 8px;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }

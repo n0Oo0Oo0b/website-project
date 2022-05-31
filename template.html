@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Some website - Home</title>
+  <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <!-- Top header -->
+  <header class="no-margin">
+    <div class="container-fluid">
+      <div class="justify-center">
+        <h1>Some Website I Made</h1>
+      </div>
+      <nav id="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">A</a></li>
+          <li class="breadcrumb-item active">B</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav id="navigation" class="navbar no-margin" style="border-radius: 0;" data-spy="affix" data-offset-top="120">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">Some Website</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Glossary</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Tim Berners-Lee</a></li>
+              <li><a href="#">Data transmission</a></li>
+              <li><a href="#">How web browsers work</a></li>
+              <li><a href="#">The secret behind HTTPS</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Behind the Scenes</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title section -->
+  <div id="title-wrapper" class="jumbotron no-margin no-padding">
+    <img src="resources/placeholder.jpg" />
+    <div class="darken"></div>
+    <div class="container">
+      <h1>Some Title</h1>
+      <p>Some subtitle</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="main-content" class="container">
+    <div class="row">
+      <nav id="page-nav" class="hidden-xs col-sm-3 col-sm-push-9">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="420">
+          <li><a href="#section1">Section 1</a></li>
+          <li><a href="#section2">Section 2</a></li>
+          <li><a href="#section3">Section 3</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#section41">Section 4-1</a></li>
+              <li><a href="#section42">Section 4-2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article id="main-article" class="col-sm-9 col-sm-pull-3">
+        <h2>Some Heading</h2>
+        <p>Bacon ipsum dolor amet frankfurter in do velit, voluptate deserunt spare ribs incididunt occaecat chislic cow exercitation tempor fatback. Labore aliqua id, prosciutto frankfurter filet mignon cillum aute. Ut turducken corned beef, kevin dolor sunt adipisicing boudin lorem. Ullamco occaecat filet mignon chicken, kevin eu jowl chislic bacon pariatur in et. Eiusmod pig pork chop do filet mignon.</p>
+        <p>Headings below are there to allow scrolling</p>
+        <h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1>
+      </article>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="no-margin">Content is 100% by me</p>
+    <p class="no-margin" style="font-size: 1.5px;">owo</p>
+    <a href="https://youtu.be/dQw4w9WgXcQ">&#169;Daniel Gu. All rights reserved.</a>
+  </footer>
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+</body>
+</html>
