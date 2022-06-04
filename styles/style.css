@@ -116,6 +116,12 @@ header {
   top: 100px;
 }
 
+@media (max-width: 767px) {
+  #page-nav .affix {
+      position: static;
+  }
+}
+
 /*
 *  Footer
 */
