@@ -8,7 +8,7 @@ Created as part of IGCSE curicculum as Y10 Final assignment
 - Pages
   - Glossary
   - Sir Tim Berners-Lee (draft complete)
-  - Data transmission
+  - Data transmission (draft complete)
   - How browsers work
   - How HTTPS works
 - Dynamic table of contents w/ jQuery
