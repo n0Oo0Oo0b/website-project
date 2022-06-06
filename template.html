@@ -7,11 +7,11 @@
   <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="styles/style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body data-spy="scroll" data-target="#page-nav" data-offset="80">
   <!-- Top header -->
   <header class="no-margin">
     <div class="container-fluid">
-      <div class="justify-center">
+      <div id="header-title" class="justify-center">
         <h1>Some Website I Made</h1>
       </div>
       <nav id="breadcrumb">
@@ -67,25 +67,18 @@
   <!-- Content -->
   <div id="main-content" class="container">
     <div class="row">
-      <nav id="page-nav" class="hidden-xs col-sm-3 col-sm-push-9">
+      <nav id="page-nav" class="col-sm-3 col-sm-push-9">
         <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="420">
           <li><a href="#section1">Section 1</a></li>
           <li><a href="#section2">Section 2</a></li>
           <li><a href="#section3">Section 3</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#section41">Section 4-1</a></li>
-              <li><a href="#section42">Section 4-2</a></li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article id="main-article" class="col-sm-9 col-sm-pull-3">
-        <h2>Some Heading</h2>
+        <h2 id="section1">Some Heading</h2>
         <p>Bacon ipsum dolor amet frankfurter in do velit, voluptate deserunt spare ribs incididunt occaecat chislic cow exercitation tempor fatback. Labore aliqua id, prosciutto frankfurter filet mignon cillum aute. Ut turducken corned beef, kevin dolor sunt adipisicing boudin lorem. Ullamco occaecat filet mignon chicken, kevin eu jowl chislic bacon pariatur in et. Eiusmod pig pork chop do filet mignon.</p>
         <p>Headings below are there to allow scrolling</p>
-        <h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1>
+        <h1 id="section2">A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1><h1>A</h1>
       </article>
     </div>
   </div>
