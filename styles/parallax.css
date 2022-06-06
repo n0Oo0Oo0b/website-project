@@ -1,7 +1,7 @@
 :root {
     --page-scroll: 0px;
     --scroll-scale: 1;
-    --offset: 0px;
+    --offset: auto;
 }
 
 .card {
@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.parallax .item {
+.parallax-item {
     position: absolute;
     transform: translateY(calc( (var(--scroll-scale) - 1) * (var(--page-scroll) - var(--offset)) ));
 }
