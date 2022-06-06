@@ -4,6 +4,7 @@
 :root {
   --background-color: #f5f5f5;
   --accent-color: #ee8;
+  --secondary-color: #337ab7;
   --text-color: #333;
 }
 
@@ -31,16 +32,31 @@ h1, h2, h3 {
 }
 
 
+/* Chrome, Safari, Opera */
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll {
+  -ms-overflow-style: none;  /* IE, Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
 /*
 *  Header + Breadcrumbs
 */
 header {
-  height: 120px;
   background-color: var(--accent-color);
+}
+
+#header-title {
+  height: 80px;
 }
 
 #breadcrumb {
   background-color: var(--background-color);
+  height: 40px;
 }
 
 

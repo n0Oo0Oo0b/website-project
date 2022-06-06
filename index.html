@@ -6,12 +6,33 @@
   <title>Some website - Home</title>
   <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="styles/parallax.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <h1>Home</h1>
+  <!-- Top header -->
+  <header class="no-margin">
+    <div class="container-fluid">
+      <div id="header-title" class="justify-center">
+        <h1>Some Website I Made</h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="card" style="height: 500px;">
+  </div>
+  <div class="card" style="height: 500px;">
+    <div class="parallax no-margin" style="--offset: 500px;">
+      <h1 class="item" style="--scroll-scale: 1.1;">Text 1</h1>
+      <h1 class="item" style="color: red; --scroll-scale: 0.8;">Text 2</h1>
+    </div>
+  </div>
+
   <a href="template.html">link</a>
+  <p>scroll</p>
+  <h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></h1>
 
   <script src="scripts/jquery.min.js"></script>
   <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>

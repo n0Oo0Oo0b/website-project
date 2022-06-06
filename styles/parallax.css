@@ -1,0 +1,22 @@
+:root {
+    --page-scroll: 0px;
+    --scroll-scale: 1;
+    --offset: 0px;
+}
+
+.card {
+    width: 100%;
+    overflow: hidden;
+    border: black 2px dotted;
+}
+
+.parallax {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.parallax .item {
+    position: absolute;
+    transform: translateY(calc( (var(--scroll-scale) - 1) * (var(--page-scroll) - var(--offset)) ));
+}
