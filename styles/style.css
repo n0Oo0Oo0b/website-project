@@ -84,6 +84,23 @@ header {
   color: var(--text-color);
 }
 
+/* Dynamic theme support */
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: var(--background-color);
+}
+
+ .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  background-color: var(--background-color);
+}
+
+.dropdown-menu, .open .dropdown-toggle {
+  background-color: var(--background-color);
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  background-color: var(--accent-color);
+}
+
 /* Menu dropdown for navbar on small screens */
 .navbar-toggle {
   z-index: 32767;
@@ -151,7 +168,11 @@ header {
   }
 }
 
-#page-nav .active a {
+#page-nav>.nav>li>a:focus, #page-nav>.nav>li>a:hover {
+  background-color: var(--accent-color);
+}
+
+#page-nav>.nav>.active>a {
   background-color: var(--secondary-color);
 }
 
