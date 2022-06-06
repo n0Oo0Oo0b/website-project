@@ -60,6 +60,11 @@ header {
 }
 
 
+#breadcrumb .breadcrumb {
+  background-color: var(--background-color);
+}
+
+
 /*
 *  Navbar
 */
@@ -136,6 +141,10 @@ header {
   #page-nav .affix {
       position: static;
   }
+}
+
+#page-nav .active a {
+  background-color: var(--secondary-color);
 }
 
 /*
