@@ -1,0 +1,69 @@
+:root {
+  --background-color: #f5f5f5;
+  --accent-color: #ee8;
+  --secondary-color: #337ab7;
+  --text-color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #333;
+    --accent-color: #111;
+    --text-color: #f5f5f5;
+  }
+}
+
+@mixin bgcolor {
+  background-color: var(--background-color);
+}
+
+@mixin accentcolor {
+  background-color: var(--accent-color);
+}
+
+@mixin secondarycolor {
+  background-color: var(--secondary-color);
+}
+
+body {
+  @include bgcolor();
+  color: var(--text-color);
+}
+
+header, #navigation, footer {
+  @include accentcolor();
+}
+
+.breadcrumb {
+  @include bgcolor();
+  > .active {
+    color: var(--text-color);
+  }
+}
+
+.nav > li {
+  a {
+    @include selected() {
+      @include bgcolor();
+    }
+  }
+  &.open {
+    .dropdown-toggle {
+      @include bgcolor();
+    }
+    .dropdown-menu {
+      @include accentcolor();
+    }
+  }
+}
+
+#page-nav > .nav > li {
+  > a {
+    @include selected() {
+      @include accentcolor();
+    }
+  }
+  &.active > a {
+    @include secondarycolor();
+  }
+}
