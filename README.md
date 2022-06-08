@@ -10,6 +10,6 @@ Created as part of IGCSE curicculum as Y10 Final assignment
   - Sir Tim Berners-Lee (draft complete)
   - Data transmission (draft complete)
   - How browsers work
-  - How HTTPS works
+  - How HTTPS works (draft complete)
 - Dynamic table of contents w/ jQuery
 - ARIA (If I have time)
