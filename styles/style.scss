@@ -119,12 +119,15 @@ header {
   }
 }
 
-article section::before {
-  content: "";
-  height: 80px;
-  margin-top: -80px;
-  background-color: transparent;
-  display: block;
+article {
+  padding-bottom: 100px;
+  section::before {
+    content: "";
+    height: 80px;
+    margin-top: -80px;
+    background-color: transparent;
+    display: block;
+  }
 }
 
 /*
