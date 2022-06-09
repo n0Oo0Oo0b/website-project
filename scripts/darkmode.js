@@ -16,7 +16,7 @@ $(() => {
     toggleDark = function() {
         let theme = $root.attr('data-theme') === 'light' ? 'dark' : 'light'
         $root.attr('data-theme', theme)
-        document.cookie = `theme=${theme}`;
+        document.cookie = `theme=${theme}; SameSite=Lax; path=/;`;
     }
 
     clearThemePreference = function() {
