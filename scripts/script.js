@@ -12,12 +12,13 @@ $(() => {
     }
 
     let $parallax = $('.parallax')
-    for (const i of $parallax) {
-        $i = $(i)
+    for (let i=0; i<$parallax.length; i++) {
+        $i = $($parallax[i])
         console.log($i)
         if ($i.css('--offset').includes('auto')) {
-            $i.css('--offset', i.getBoundingClientRect().top + 'px')
+            $i.css('--offset', $i[0].getBoundingClientRect().top + 'px')
         }
+        $i.css('z-index', i)
     }
 
     document.addEventListener('scroll', () => {
