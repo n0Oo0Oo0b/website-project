@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Some website - Data transmission</title>
+  <link href="../styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body data-spy="scroll" data-target="#page-nav" data-offset="0">
+  <!-- Top header -->
+  <header>
+    <div class="container-fluid">
+      <div id="header-title">
+        <h1>Some Website I Made</h1>
+      </div>
+      <nav id="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item">Articles</li>
+          <li class="breadcrumb-item active">Data transmission</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav id="navigation" class="navbar" style="border-radius: 0;" data-spy="affix" data-offset-top="120">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">Some Website</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../glossary.html">Glossary</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/berners-lee.html">Tim Berners-Lee</a></li>
+              <li><a href="#">Data transmission</a></li>
+              <li><a href="/web-browser.html">How web browsers work</a></li>
+              <li><a href="/https.html">The secret behind HTTPS</a></li>
+            </ul>
+          </li>
+          <li><a href="../behind-the-scenes.html">Behind the Scenes</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title section -->
+  <div id="title-wrapper" class="jumbotron">
+    <img src="../resources/placeholder.jpg" />
+    <div class="darken"></div>
+    <div class="container">
+      <h1>Data transmission</h1>
+      <p>Serial/parallel, simplex/duplex</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="main-content" class="container">
+    <div class="row">
+      <nav id="page-nav" class="col-sm-3 col-sm-push-9">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="420"></ul>
+      </nav>
+      <article id="main-article" class="col-sm-9 col-sm-pull-3">
+        <section id="introduction">
+        <h2>Introduction</h2>
+          <p>Data transmission is a key part of basically everything to do with computers. Without it, <del>You wouldn't be able to connect your 3090 Ti to your computer</del> computers wouldn't even exist at all. This article will explain all you need to know about data transmission (at least in the IGCSE course)</p>
+        </section>
+        <section id="serial-parallel">
+        <h2>Serial vs Parallel</h2>
+          <p>Serial and parallel is one of the core aspects of data transmission. They are often grouped together because all forms of data transmission fall into one of these categories. In serial transmission, data is sent through one path, while in parallel transmission, data is sent through multiple paths.</p>
+          <p>While serial transmission is significantly slower as it only has a fraction of the bandwidth, parallel transmission is more complex and can get more pricey. In addition, parallel transmission can lead to different arrival times for data (as one path may be slightly slower than others) which can create a significant disrepancy over long distances. This is why parallel transmission is mainly preferred for short distances, while serial is preferred for longer distances.</p>
+          <table>
+            <thead>
+              <tr>
+                <th align="left">Serial</th>
+                <th align="left">Parallel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">Very slow</td>
+                <td align="left">Fast (more bandwidth)</td>
+              </tr>
+              <tr>
+                <td align="left">Simple</td>
+                <td align="left">More complexity</td>
+              </tr>
+              <tr>
+                <td align="left">Cost-efficient</td>
+                <td align="left">More expensive</td>
+              </tr>
+              <tr>
+                <td align="left">Consistent</td>
+                <td align="left">Arrival times may fluctuate</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="simplex-duplex">
+          <h2>Simplex and duplex</h2>
+          <p>The next categories of data transmission represents in what directions data can be sent. Simply put, simplex means data can only be transmitted in one direction only, duplex means it can be sent in both directions, and half duplex supports going in both directions but not simultaneously.</p>
+          <table>
+            <thead>
+              <tr>
+                <th align="left">Simplex</th>
+                <th align="left">Duplex</th>
+                <th align="left">Half duplex</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">One direction only</td>
+                <td align="left">Both directions</td>
+                <td align="left">Only 1 direciton at a time</td>
+              </tr>
+              <tr>
+                <td align="left">Keyboard input (data only goes from keyboard =&gt; computer)</td>
+                <td align="left">Telephone (you can both talk and listen at the same time)</td>
+                <td align="left">Walkie talkie (only 1 person can talk at any time)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+          <section id="packets">
+          <h2>Transmission over the internet</h2>
+          <p>On the internet, data is transmitted through packets. While packets can get quite complicated with specifics, the core principle is simple: a packet is the smallest ‘unit’ of data sent across the web. However, a limited packet size means larger resources wouldn't fit in a single packet. If the file requested is too large to be sent in one packet, the data is split into multiple different packets that are sent individually to reach their destination. These packets each take a different route to arrive. Each packet is like a letter, containing the following information:</p>
+          <ul>
+            <li>Sender IP address</li>
+            <li>Receiver IP address</li>
+            <li>Payload (actual data)</li>
+            <li>Checksum (to verify data)</li>
+            <li>Packet ID (to tell what order the packets go in)</li>
+            <li>Etc.</li>
+          </ul>
+          <p>The internet consists of parallel duplex lines (mostly) underground. While the information is sent across long distances, each packet is quite small (most are smaller than 2KiB in size) and so the whole packet is sent through one path to prevent desynchronization issues. It is also a duplex system because it can transfer data (packets) in both directions at the same time.</p>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Content is 100% by me</p>
+    <p style="font-size: 1.5px;">owo</p>
+    <!-- You know the rules and so do I -->
+    <a href="https://youtu.be/dQw4w9WgXcQ">&#169;Daniel Gu. All rights reserved.</a>
+  </footer>
+
+  <script src="../scripts/jquery.min.js"></script>
+  <script src="../scripts/toc.js"></script>
+  <script src="../scripts/bootstrap.min.js"></script>
+</body>
+</html>
