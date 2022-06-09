@@ -1,0 +1,44 @@
+:root {
+  --page-scroll: 0px;
+  --scroll-scale: 1;
+  --offset: auto;
+  --id: 0;
+}
+
+.card {
+  width: 100%;
+  border: black 2px dotted;
+  position: relative;
+  z-index: -32768;
+
+  &.black {
+    background-color: black;
+  }
+  &.white {
+    background-color: white;
+  }
+}
+
+.center {
+  display:flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.parallax {
+  width: 100%;
+  height: 80%;
+
+  .parallax-item {
+    max-width: 100%;
+    position: absolute;
+    margin-top: calc( (var(--scroll-scale) - 1) * (var(--page-scroll) - var(--offset)));
+  }
+
+  .container {
+    z-index: 1;
+    color: white;
+    background-color: transparent;
+  }
+}

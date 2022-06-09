@@ -9,36 +9,23 @@
   <link href="styles/parallax.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <!-- Top header -->
-  <header class="no-margin">
-    <div class="container-fluid">
-      <div id="header-title" class="justify-center">
-        <h1>Some Website I Made</h1>
+  <div class="card black" style="height:1000px;">
+    <div class="parallax center" style="--offset: -75px;">
+      <img class="parallax-item" style="--scroll-scale: calc(1 + 0.15*var(--id)); filter: saturate(calc(1 - 0.2*var(--id))); z-index: calc(var(--id) * -1)" src="resources/world-outline.png" repeat="5" >
+      <div class="container jumbotron center">
+        <h1>The Internet and the World Wide Web</h1>
+        <h2>owo</h2>
       </div>
     </div>
-  </header>
-
-  <div style="height: 500px;"></div>
-
-  <div class="card" style="height: 1000px; width: 100%;">
-    <div class="parallax no-margin" style="--offset: 750px; width: 100%; height: 100%; display:flex; justify-content: center; align-items: center;">
-      <div class="parallax-item" style="--scroll-scale: 0.4; border: 10px #f00 solid; width: 80%; height: 90%; background-color: #f002; z-index:9;"></div>
-      <div class="parallax-item" style="--scroll-scale: 0.6; border: 10px #f80 solid; width: 70%; height: 80%; background-color: #f802; z-index:8;"></div>
-      <div class="parallax-item" style="--scroll-scale: 0.8; border: 10px #ff0 solid; width: 60%; height: 70%; background-color: #ff02; z-index:7;"></div>
-      <div class="parallax-item" style="--scroll-scale: 1  ; border: 10px #8f0 solid; width: 50%; height: 60%; background-color: #8f02; z-index:6;"></div>
-      <div class="parallax-item" style="--scroll-scale: 1.2; border: 10px #0f8 solid; width: 40%; height: 50%; background-color: #0f82; z-index:5;"></div>
-      <div class="parallax-item" style="--scroll-scale: 1.4; border: 10px #08f solid; width: 30%; height: 40%; background-color: #08f2; z-index:4;"></div>
-    </div>
   </div>
-  <div class="card" style="height: 500px;">
-    <div class="parallax no-margin">
-      <h1 class="parallax-item" style="--scroll-scale: 1.1;">Text 1</h1>
-      <h1 class="parallax-item parallax-fade" style="color: red; --scroll-scale: 0.8;">Text 2</h1>
+
+  <div class="card" style="height: 500px; display: none;">
+    <div class="parallax">
+      <h1 class="parallax-item" style="--scroll-scale: 1.1;" repeat="2">Text 1</h1>
+      <h1 class="parallax-item" style="color: red; --scroll-scale: 0.8;">Text 2</h1>
     </div>
   </div>
 
-  <a href="template.html">link</a>
-  <p>scroll</p>
   <h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></h1>
 
   <script src="scripts/jquery.min.js"></script>
