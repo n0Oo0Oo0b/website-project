@@ -37,18 +37,21 @@
       </div>
       <div class="collapse navbar-collapse" id="navbar-content">
         <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Glossary</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Tim Berners-Lee</a></li>
-              <li><a href="#">Data transmission</a></li>
-              <li><a href="#">How web browsers work</a></li>
-              <li><a href="#">The secret behind HTTPS</a></li>
+              <li><a href="articls/berners-lee.html">Tim Berners-Lee</a></li>
+              <li><a href="articles/data-transmission.html">Data transmission</a></li>
+              <li><a href="articles/web-browser.html">How web browsers work</a></li>
+              <li><a href="articles/https.html">The secret behind HTTPS</a></li>
             </ul>
           </li>
-          <li><a href="#">Behind the Scenes</a></li>
+          <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" onclick="toggleDark()">Change Theme</a></li>
         </ul>
       </div>
     </div>
@@ -92,5 +95,6 @@
   <script src="scripts/jquery.min.js"></script>
   <script src="scripts/toc.js"></script>
   <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/darkmode.js"></script>
 </body>
 </html>
