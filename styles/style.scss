@@ -22,14 +22,6 @@ h1, h2, h3 {
   font-weight: 120;
 }
 
-.hide-scroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  ::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 
 /*
 *  Header + Breadcrumbs
