@@ -119,7 +119,7 @@ header {
   }
 }
 
-article {
+#main-article {
   padding-bottom: 100px;
   section::before {
     content: "";
@@ -127,6 +127,11 @@ article {
     margin-top: -80px;
     background-color: transparent;
     display: block;
+  }
+  img {
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
 }
 
