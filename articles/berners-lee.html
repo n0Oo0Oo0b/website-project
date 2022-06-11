@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Some website - Data transmission</title>
+  <link href="../styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body data-spy="scroll" data-target="#page-nav" data-offset="0">
+  <!-- Top header -->
+  <header>
+    <div class="container-fluid">
+      <div id="header-title">
+        <h1>Some Website I Made</h1>
+      </div>
+      <nav id="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item">Articles</li>
+          <li class="breadcrumb-item active">Data transmission</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav id="navigation" class="navbar" style="border-radius: 0;" data-spy="affix" data-offset-top="120">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="../index.html">Some Website</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../glossary.html">Glossary</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Tim Berners-Lee</a></li>
+              <li><a href="data-transmission.html">Data transmission</a></li>
+              <li><a href="web-browser.html">How web browsers work</a></li>
+              <li><a href="https.html">The secret behind HTTPS</a></li>
+            </ul>
+          </li>
+          <li><a href="../behind-the-scenes.html">Behind the Scenes</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" onclick="toggleDark()">Change Theme</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title section -->
+  <div id="title-wrapper" class="jumbotron">
+    <img src="../resources/berners-lee/worldwideweb.jpeg" />
+    <div class="darken"></div>
+    <div class="container">
+      <h1>Tim Berners-Lee</h1>
+      <p>And the history of the World Wide Web</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="main-content" class="container">
+    <div class="row">
+      <nav id="page-nav" class="col-sm-3 col-sm-push-9">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="420"></ul>
+      </nav>
+      <article id="main-article" class="col-sm-9 col-sm-pull-3">
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>Tim Berners-Lee is an English computer scientests that pioneered the creation of the World Wide Web (WWW). He is responsible for the web as it stands today, for not only the creation of it but also for maintaining its decentralized state.</p>
+          <img src="../resources/berners-lee/timmy.jpeg" />
+        </section>
+        <section id="internet-vs-www">
+          <h2>Internet vs WWW</h2>
+          <p>Although these terms are often used interchangably in daily life, they actually mean slightly different things. The World Wide Web is made up of the websites (like this one!) stored on servers, while the internet is the actual web of connections between computers that the WWW operates on. The internet also includes all traffic (packets) that are sent across it, that may contain information such as files, email, etc.</p>
+        </section>
+        <section id="creation">
+          <h2>Creation of the WWW</h2>
+          <p>In the days before the World Wide Web, information was stored individually on each computer, which often made searching for a specific file tedious and time consuming as you would often search through multiple computers before finding the correct one.</p>
+          <p>Tim Berners-Lee, a software engineer at CERN, thought of solving this issue by using the growing internet to share information. The internet back then was mostly used for email, and it could be used to reliably transfer data across the world. Using hypertext, onscreen text interconnected with hyperlinks, he developed a proposal on how such a system could work in March 1989.</p>
+          <p>By October 1990, Berners-Lee was able to write the most fundamental technologies that make the WWW possible:</p>
+          <ul>
+            <li>HyperText Markup Language (HTML): Outlines how pages are formatted on the web</li>
+            <li>Uniform Resource Identifier (URI): A unique address given to every resource on the web. Also known as the URL</li>
+            <li>HyperText Transfer Protocol (HTTP): The protocol that dictates how hypertext (webpages) should be sent across the web</li>
+          </ul>
+          <img src="../resources/berners-lee/items.jpg" />
+          <p>By the end of the year, the first browser and first webserver was launched, and the web was given access to a select few people. However, Berners-Lee realised that it could only reach its true potential if it was free to use for everyone. After some advocation, in April 1993, CERN announced that the underlying frameworks will be accessible to everyone. This marked the start of the World Wide Web as we know it.</p>
+        </section>
+        <section id="decentralization">
+          <h2>Decentralization</h2>
+          <p>The decentralization of the World WIde Web is what makes it so prominent; the true potential of the web cannot be reached without it. If access to the web was restricted, most of the people that surf the web today . As it stands, the vast majority of content on the web comes from its users, and the web wouldn't be at this scale with the lack of the amount of users and web traffic the web sees today.</p>
+          <p>Upon creation of the web, Tim Berners-Lee created the World Wide Web Consrotium (W3C) that makes sure that coorprations can't put the WWW behind a paywall. Sir Tim Berners-Lee still stands as the director of the W3C to this day.</p>
+          <img src="../resources/berners-lee/w3c.jpg" />
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Content is 100% by me</p>
+    <p style="font-size: 1.5px;">owo</p>
+    <!-- You know the rules and so do I -->
+    <a href="https://youtu.be/dQw4w9WgXcQ">&#169;Daniel Gu. All rights reserved.</a>
+  </footer>
+
+  <script src="../scripts/jquery.min.js"></script>
+  <script src="../scripts/toc.js"></script>
+  <script src="../scripts/bootstrap.min.js"></script>
+  <script src="../scripts/darkmode.js"></script>
+</body>
+</html>
