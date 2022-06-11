@@ -9,7 +9,7 @@ Created as part of IGCSE curicculum as Y10 Final assignment
   - Glossary
   - Sir Tim Berners-Lee (draft complete)
   - ~~Data transmission~~
-  - How browsers work
+  - How browsers work (draft complete)
   - How HTTPS works (draft complete)
 - ~~Dynamic table of contents w/ jQuery~~
 - ARIA (If I have time)
