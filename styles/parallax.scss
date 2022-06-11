@@ -35,11 +35,18 @@
     max-width: 100%;
     position: absolute;
     margin-top: calc( (var(--scroll-scale) - 1) * (var(--page-scroll) - var(--offset)));
+
+    &.white {
+      color: white;
+    }
+
+    &.black {
+      color: black;
+    }
   }
 
   .container {
     z-index: 1;
-    color: white;
     background-color: transparent;
   }
 }
