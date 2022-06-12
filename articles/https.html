@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Some website - Home</title>
+  <link href="../styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body data-spy="scroll" data-target="#page-nav" data-offset="0">
+  <!-- Top header -->
+  <header>
+    <div class="container-fluid">
+      <div id="header-title">
+        <h1>Some Website I Made</h1>
+      </div>
+      <nav id="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">A</a></li>
+          <li class="breadcrumb-item active">B</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav id="navigation" class="navbar" style="border-radius: 0;" data-spy="affix" data-offset-top="120">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">Some Website</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../glossary.html">Glossary</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="berners-lee.html">Tim Berners-Lee</a></li>
+              <li><a href="data-transmission.html">Data transmission</a></li>
+              <li><a href="web-browser.html">How web browsers work</a></li>
+              <li><a href="#">The secret behind HTTPS</a></li>
+            </ul>
+          </li>
+          <li><a href="../behind-the-scenes.html">Behind the Scenes</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" onclick="toggleDark()">Change Theme</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title section -->
+  <div id="title-wrapper" class="jumbotron">
+    <img src="../resources/web-browser/padlock.jpeg" />
+    <div class="darken"></div>
+    <div class="container">
+      <h1>The secret of HTTPS</h1>
+      <p>How does secure encryption work?</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="main-content" class="container">
+    <div class="row">
+      <nav id="page-nav" class="col-sm-3 col-sm-push-9">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="500"></ul>
+      </nav>
+      <article id="main-article" class="col-sm-9 col-sm-pull-3">
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>We browse the Web through the HyperText Transfer Protocol (HTTP). But most websites nowadays will use HTTPS instead. The additional 'S' stands for 'Secure', and as the name suggests, it is a more secure variant of HTTP, using cryptography to keep the information secure from hackers.</p>
+        </section>
+        <section id="encryption">
+          <h2>Encryption</h2>
+          <p>In the early days of the Web, the webpages (HTML files) were sent across the web unencrypted. However, this posed a security threat, as anyone with access to the packets could see the data inside of them. To prevent this, HTTPS was developed. HTTPS uses a system called SSL (short for Secure Sockets Layer), which is a system that encrypts data while it is being transferred.</p>
+        </section>
+        <section id="how-it-works">
+          <h2>How it works</h2>
+          <p>When data is transferred, the sender encrypts the plaintext (original, readable data) into ciphertext (encrypted data). The encryption method used here is an asymmetric cipher.</p>
+          <p>To understand symmetric/asymmetric ciphers, you can think of it as a treasure chest.</p>
+          <p>In a symmetric cipher, there is one key used to encrypt and decrypt the information; the same key used to lock the chest is used to unlock it. However, this causes issues when encrypting over the internet as every chest will be unlockable with a single key. The server can't use a different key for each chest either, as it would have to then send the key to the client which itself will require secure transmission ;-; (recursion go brrrr).</p>
+          <img src="../resources/https/symmetric.jpg" />
+          <p>In an asymmetric cipher, however, there are 2 keys to a single chest; one is used to lock (encrypt) it, and the other is used to unlock (decrypt) it. While the concept may be unusual at first, it makes more sense for the security we want: the client can get the data it wants securely. </p>
+          <img src="../resources/https/asymmetric.jpg" />
+          <p>In such a system, each user will have two keys: a public and private key. The public key, as the name suggests, will be shared for everyone else, and the private key will be kept secret. The public key will asymmetrically encode data such that it will be decoded by the private key. When the server sends its packets, it will encode the packet with the receiver's public key, and the client will be able to decode it with its private key.</p>
+          <p>That is SSL/TSA in a nutshell. If you are interested in how the encryption works in detail, google 'RSA encryption' (warning: math) to find out more.</p>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Content is 100% by me</p>
+    <p style="font-size: 1.5px;">owo</p>
+    <!-- You know the rules and so do I -->
+    <a href="https://youtu.be/dQw4w9WgXcQ">&#169;Daniel Gu. All rights reserved.</a>
+  </footer>
+
+  <script src="../scripts/jquery.min.js"></script>
+  <script src="../scripts/toc.js"></script>
+  <script src="../scripts/bootstrap.min.js"></script>
+  <script src="../scripts/darkmode.js"></script>
+</body>
+</html>
