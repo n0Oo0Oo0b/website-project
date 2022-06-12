@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Some website - Home</title>
+  <link href="../styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body data-spy="scroll" data-target="#page-nav" data-offset="0">
+  <!-- Top header -->
+  <header>
+    <div class="container-fluid">
+      <div id="header-title">
+        <h1>Some Website I Made</h1>
+      </div>
+      <nav id="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">A</a></li>
+          <li class="breadcrumb-item active">B</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav id="navigation" class="navbar" style="border-radius: 0;" data-spy="affix" data-offset-top="120">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">Some Website</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../glossary.html">Glossary</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="berners-lee.html">Tim Berners-Lee</a></li>
+              <li><a href="data-transmission.html">Data transmission</a></li>
+              <li><a href="#">How web browsers work</a></li>
+              <li><a href="https.html">The secret behind HTTPS</a></li>
+            </ul>
+          </li>
+          <li><a href="../behind-the-scenes.html">Behind the Scenes</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" onclick="toggleDark()">Change Theme</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title section -->
+  <div id="title-wrapper" class="jumbotron">
+    <img src="../resources/placeholder.jpg" />
+    <div class="darken"></div>
+    <div class="container">
+      <h1>How Web Browsers Work</h1>
+      <p></p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="main-content" class="container">
+    <div class="row">
+      <nav id="page-nav" class="col-sm-3 col-sm-push-9">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="500"></ul>
+      </nav>
+      <article id="main-article" class="col-sm-9 col-sm-pull-3">
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>We all use web browsers on a day-to-day basis. They access the World Wide Web for us, fetching websites from servers over internet connection to display them. But how does this process work? How do you receive signals from the internet into your home?</p>
+        </section>
+        <section id="isp">
+          <h2>The ISP</h2>
+          <p>The ISP, or the Internet Service Provider, is the organisation that provides your internet connection. They give you, for a paid fee, access to the high-speed internet lines underground that let you browse the web.</p>
+          <p>When a request is made from the client (user), the packet is sent through the ISP into a server which can be used to view webpages. Packets containing information for these webpages are also relayed through the ISP to reach your home.</p>
+          <img src="../resources/web-browser/isp.jpg" />
+        </section>
+        <section id="modem">
+          <h2>The Modem</h2>
+          <p>The modem is the box that connects your home to the internet. At the moment, the signals from the ISP that reach your home doesn't do anything as they are different from the signals that your computer can read. The modem, usually installed by your ISP, can decode that information for your computers to use. Ths ISP does this so that they can easily halt your internet connection if you stop paying them ¯\_(ツ)_/¯.</p>
+          <img src="../resources/web-browser/modem.jpg" />
+        </section>
+        <section id="router">
+          <h2>The Router</h2>
+          <p>Currently, the modem can decode signals from the ISP so that you can use them. However, there is one last problem: the modem only has one output. However, the router is here for us! The router acts as a hub that can handle signals for multiple computers at once. It takes one input (from the modem or occasionally another router) and has multiple outputs which can each connect to a computer. It also may have Wi-Fi capabilities which can share the output wirelessly.</p>
+          <p>Some modems will actually come with a router built-in to it, like a 2-in-1 modem+router combo.</p>
+          <img src="../resources/web-browser/router.jpg" />
+        </section>
+        <section id="browser">
+          <h2>The Browser</h2>
+          <p>Finally, we are back where we started, our good old trusty browser. It will decode the packets sent all the way through the ISP, modem and router into the computer. It checks for any loss of packets, verifies that each packet hasn't been altered, and joins multiple packets representing larger files to reconstruct the original. And lo and behold, the browser can now display the website as if it were the server!</p>
+          <img src="../resources/web-browser/browser.jpg" />
+        </section>
+        <img src="../resources/web-browser/overall.jpg" />
+      </article>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Content is 100% by me</p>
+    <p style="font-size: 1.5px;">owo</p>
+    <!-- You know the rules and so do I -->
+    <a href="https://youtu.be/dQw4w9WgXcQ">&#169;Daniel Gu. All rights reserved.</a>
+  </footer>
+
+  <script src="../scripts/jquery.min.js"></script>
+  <script src="../scripts/toc.js"></script>
+  <script src="../scripts/bootstrap.min.js"></script>
+  <script src="../scripts/darkmode.js"></script>
+</body>
+</html>
