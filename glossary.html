@@ -185,23 +185,5 @@
   <script src="scripts/toc.js"></script>
   <script src="scripts/bootstrap.min.js"></script>
   <script src="scripts/darkmode.js"></script>
-  <script>
-    let seen = false;
-    let c = decodeURIComponent(document.cookie).split(';');
-    c.forEach((i) => {
-        let s = i.split('=');
-        if (s[0] === 'seen') {
-            seen=true;
-        }
-    });
-    console.log(seen);
-    const urlParams = new URLSearchParams(window.location.search);
-    if ((urlParams.get('rickroll') == 'true') && (!seen)) {
-      document.cookie = 'seen=true;path=/';
-      setTimeout(() => {
-        window.open('https://youtu.be/dQw4w9WgXcQ', '_self');
-      }, 2000);
-    }
-  </script>
 </body>
 </html>
