@@ -16,7 +16,7 @@ $(() => {
         $i = $($parallax[i])
         console.log($i)
         if ($i.css('--offset').includes('auto')) {
-            $i.css('--offset', $i[0].getBoundingClientRect().top + 'px')
+            $i.css('--offset', ($i.parent()[0].getBoundingClientRect().top - 50) + 'px')
         }
         $i.css('z-index', i)
     }
