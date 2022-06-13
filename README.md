@@ -3,13 +3,13 @@
 Created as part of IGCSE curicculum as Y10 Final assignment
 
 ## Planned changes
-- Fancy `index.html` page (need more ideas)
+- Fancy `index.html` page (in progress)
 - ~~Dark mode~~
 - Pages
-  - Glossary
-  - Sir Tim Berners-Lee (draft complete)
+  - ~~Glossary~~
+  - ~~Sir Tim Berners-Lee~~
   - ~~Data transmission~~
-  - How browsers work (draft complete)
-  - How HTTPS works (draft complete)
+  - ~~How browsers work~~
+  - ~~How HTTPS works~~
+  - Behind the scenes content
 - ~~Dynamic table of contents w/ jQuery~~
-- ARIA (If I have time)
