@@ -8,6 +8,10 @@
 .card {
   width: 100%;
   position: relative;
+
+  &.page-card {
+    height: 600px;
+  }
 }
 
 .center {
@@ -34,6 +38,14 @@
     &.black {
       color: black;
     }
+
+    &.p-fore {
+      --scroll-scale: 0.48;
+    }
+    
+    &.p-mid {
+      --scroll-scale: 0.8;
+    }
   }
 
   .container {
@@ -41,9 +53,10 @@
     background-color: transparent;
     color: white;
 
+    display: flex;
+    flex-direction: column;
+
     &.right-align {
-      display: flex;
-      flex-direction: column;
       align-items: flex-end;
     }
   }
