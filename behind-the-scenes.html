@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Some website - Home</title>
+  <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body data-spy="scroll" data-target="#page-nav" data-offset="0">
+  <!-- Top header -->
+  <header>
+    <div class="container-fluid">
+      <div id="header-title">
+        <h1>Some Website I Made</h1>
+      </div>
+      <nav id="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">A</a></li>
+          <li class="breadcrumb-item active">B</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav id="navigation" class="navbar" style="border-radius: 0;" data-spy="affix" data-offset-top="120">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">Some Website</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="articls/berners-lee.html">Tim Berners-Lee</a></li>
+              <li><a href="articles/data-transmission.html">Data transmission</a></li>
+              <li><a href="articles/web-browser.html">How web browsers work</a></li>
+              <li><a href="articles/https.html">The secret behind HTTPS</a></li>
+            </ul>
+          </li>
+          <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" onclick="toggleDark()">Change Theme</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title section -->
+  <div id="title-wrapper" class="jumbotron">
+    <img src="resources/code.jpg" />
+    <div class="darken"></div>
+    <div class="container">
+      <h1>Behind the scenes</h1>
+      <p>Things I used to create the website</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="main-content" class="container">
+    <div class="row">
+      <nav id="page-nav" class="col-sm-3 col-sm-push-9">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="500"></ul>
+      </nav>
+      <article id="main-article" class="col-sm-9 col-sm-pull-3">
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>This is my website (go look at the rest of it if you haven't already, it was put at the end of the navbar for a reason). It was a fun process and I think it was very good for a first go at web development :)</p>
+          <p>If you are curious about how I made any of this, the source code (all html, css and js files) is available on <a href="https://github.com/n0Oo0Oo0b/website-project/">github</a>.</p>
+        </section>
+        <section id="test">
+          <h2>Libraries</h2>
+          <p>HTML/CSS/JS is too limited, so I had to use some external extensions in order to create this website, all of which are listed here:</p>
+          <ul>
+            <li><a href="https://jquery.com/">jQuery</a>: The go-to libarary for anything to do with DOM manipulation. It is used in every script I have written for the website, using functionalities from automating the table of contents generation to preserving light/dark theme preference through cookies.</li>
+            <li><a href="https://getbootstrap.com/">Bootstrap</a>: I don't know why Mr. Forbes didn't introduce us to it, but it has been a massive help to everything from containers to the navbar. It also made for an extremely responsive webpage that will function on phone screens just fine</li>
+            <li><a href="https://sass-lang.com/">SASS</a>: I found this one while searching on YouTube once (all those google searches made it to my YouTube recommendations after all smh) and it made styling a lot easier. All the styling was <a href="https://github.com/n0Oo0Oo0b/website-project/search?l=scss">done in .scss files</a> and compiled to .css for the website to use.</li>
+          </ul>
+          <img src="resources/libraries.jpg" />
+        </section>
+        <section id="improvements">
+          <h2>Potential Improvements</h2>
+          <p>While it is a complete standalone website, it isn't perfect, and here are some changes that could improve it:</p>
+          <ul>
+            <li>Better accessibility (Alt text, ARIA, etc.)</li>
+            <li>Good CSS that doesn't depend on the HTML structure</li>
+            <li>Better <code>index.html</code> because it was kinda rushed ¯\_(ツ)_/¯</li>
+            <li>Light/dark theme diagrams and better theme colors overall</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Content is 100% by me</p>
+    <p style="font-size: 1.5px;">owo</p>
+    <!-- You know the rules and so do I -->
+    <a href="https://youtu.be/dQw4w9WgXcQ">&#169;Daniel Gu. All rights reserved.</a>
+  </footer>
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/toc.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/darkmode.js"></script>
+</body>
+</html>
