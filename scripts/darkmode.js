@@ -6,7 +6,7 @@ $(() => {
         if (s[0] === 'theme') {
             theme = s[1];
         }
-    })
+    });
     $root = $(document.documentElement);
     if (theme === null) {
         theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
